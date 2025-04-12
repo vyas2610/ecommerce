@@ -1,7 +1,6 @@
 import React from "react";
 
 const ProductPage = (props) => {
-  console.log(props);
   return (
     <div className="product">
       <div className="hoverEffect">
