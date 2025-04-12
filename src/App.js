@@ -1,6 +1,7 @@
 import React from "react";
 import ProductPage from "./layouts/ProductPage";
 
+import ProData from "./layouts/data";
 const App = () => {
   return (
     <>
@@ -8,10 +9,15 @@ const App = () => {
         <h1>Products | Page</h1>
       </div>
       <div className="main">
-        <ProductPage />
-        <ProductPage />
-        <ProductPage />
-        <ProductPage />
+        {ProData.map((Data) => {
+          return (
+            <ProductPage
+              prosrc={Data.prosrc}
+              proname={Data.proname}
+              prodesc={Data.prodesc}
+            />
+          );
+        })}
       </div>
       <div className="header1">
         <p>Design & Developed By Deepak Vyas</p>
